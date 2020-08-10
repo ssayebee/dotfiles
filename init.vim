@@ -356,3 +356,8 @@ map <F7> :w <CR> :!clear && gcc -g % && ./a.out <CR>
 
 highlight Pmenu guifg=#dcdfe4 guibg=#3a3e46
 
+let g:UltiSnipsExpandTrigger="<Tab>"
+let g:UltiSnipsJumpForwardTrigger="<Tab>"
+let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
+let g:UltiSnipsEditSplit="vertical"
+" let g:UltiSnipsSnippetDirectories = ['UltiSnips']
