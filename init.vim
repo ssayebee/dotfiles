@@ -1,8 +1,8 @@
 set nu
 set smartindent
-set tabstop=2
+set tabstop=4
 set expandtab
-set shiftwidth=2
+set shiftwidth=4
 set clipboard=unnamedplus
 set t_Co=256
 set pastetoggle=<F3>
@@ -62,6 +62,7 @@ call plug#end()
 " Colorscheme config 
 colorscheme onehalfdark
 highlight ColorColumn ctermbg=gray
+highlight Visual gui=reverse
 
 " use true tone color for theme
 if exists('+termguicolors')
@@ -237,12 +238,11 @@ let g:coc_filetype_map = {
 " indent guiles config
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_guide_size = 1
-let g:indent_guides_start_level = 2
+let g:indent_guides_start_level = 1
 let g:indent_guides_auto_colors = 0
 
-hi IndentGuidesOdd  guibg=Gray50
-hi IndentGuidesEven guibg=#474e5d
-
+highlight IndentGuidesOdd  guibg=#474e5d
+highlight IndentGuidesEven guibg=#575e6d
 
 " Vimwiki Config
 " 로컬 리더 키 설정은 취향이니 각자 마음에 드는 키로 설정한다
@@ -361,3 +361,5 @@ let g:UltiSnipsJumpForwardTrigger="<Tab>"
 let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
 let g:UltiSnipsEditSplit="vertical"
 " let g:UltiSnipsSnippetDirectories = ['UltiSnips']
+
+autocmd FileType vimwiki set shiftwidth=2 tabstop=2
