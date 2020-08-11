@@ -348,10 +348,10 @@ if executable(s:clip)
   augroup END
 end
 
-nmap <leader>ot :!/mnt/c/Program\ Files/Typora/Typora.exe %<CR>
 nmap <F8> :TagbarToggle<CR>
 nmap <leader>ev :e ~/.config/nvim/init.vim<CR>
 nmap <leader>es :UltiSnipsEdit<CR>
+map <leader>ot :bel sp \| resize 10 \| terminal<CR>
 map <F7> :w <CR> :!clear && gcc -g % && ./a.out <CR>
 
 highlight Pmenu guifg=#dcdfe4 guibg=#3a3e46
@@ -363,3 +363,10 @@ let g:UltiSnipsEditSplit="vertical"
 " let g:UltiSnipsSnippetDirectories = ['UltiSnips']
 
 autocmd FileType vimwiki set shiftwidth=2 tabstop=2
+
+let g:airline#extensions#tabline#enabled = 1
+
+tnoremap <C-h> <c-\><c-n><c-w>h
+tnoremap <C-j> <c-\><c-n><c-w>j
+tnoremap <C-k> <c-\><c-n><c-w>k
+tnoremap <C-l> <c-\><c-n><c-w>l

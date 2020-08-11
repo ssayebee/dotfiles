@@ -7,7 +7,7 @@ cp -r ~/.config/nvim/UltiSnips $(pwd)
 # coc-config
 cp ~/.config/nvim/coc-settings.json $(pwd)
 # powerlevel10k config
-cp ~/.p10k.zsh
+cp ~/.p10k.zsh ${pwd}
 
 git add .
 git commit -m "$now_time updated"
