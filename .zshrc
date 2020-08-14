@@ -112,3 +112,5 @@ export PATH="$HOME/gems/bin:$PATH"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 alias vi='nvim'
+export EDITOR=nvim
+export HIGHLIGHT_STYLE=solarized-light
