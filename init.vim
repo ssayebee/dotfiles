@@ -70,9 +70,9 @@ highlight Visual gui=reverse
 
 " use true tone color for theme
 if exists('+termguicolors')
-	let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-	let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-	set termguicolors
+    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+    set termguicolors
 endif
 
 " NERDTree
@@ -91,27 +91,27 @@ set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
 
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']       " Ignore in .gitignore
 let g:ctrlp_custom_ignore = {
-			\ 'dir':  '\v[\/]\.(git|hg|svn)$|public$\|log$\|tmp$\|vendor$|node_modules$\|DS_Store$',
-			\ 'file': '\v\.(exe|so|dll)$',
-			\ 'link': 'some_bad_symbolic_links',
-			\ }
+            \ 'dir':  '\v[\/]\.(git|hg|svn)$|public$\|log$\|tmp$\|vendor$|node_modules$\|DS_Store$',
+            \ 'file': '\v\.(exe|so|dll)$',
+            \ 'link': 'some_bad_symbolic_links',
+            \ }
 
 nmap ]h <Plug>(GitGutterNextHunk)
 nmap [h <Plug>(GitGutterPrevHunk)
 
 " coc config
 let g:coc_global_extensions = [
-			\ 'coc-python',
-			\ 'coc-clangd',
-			\ 'coc-marketplace',
-			\ 'coc-tsserver',
-			\ 'coc-json',
-			\ 'coc-pairs',
-			\ 'coc-emmet',
-			\ 'coc-tslint',
-			\ 'coc-prettier',
-			\ 'coc-snippets',
-			\ ]
+            \ 'coc-python',
+            \ 'coc-clangd',
+            \ 'coc-marketplace',
+            \ 'coc-tsserver',
+            \ 'coc-json',
+            \ 'coc-pairs',
+            \ 'coc-emmet',
+            \ 'coc-tslint',
+            \ 'coc-prettier',
+            \ 'coc-snippets',
+            \ ]
 
 " from readme
 " if hidden is not set, TextEdit might fail.
@@ -127,14 +127,14 @@ set signcolumn=yes
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
 inoremap <silent><expr> <TAB>
-			\ pumvisible() ? "\<C-n>" :
-			\ <SID>check_back_space() ? "\<TAB>" :
-			\ coc#refresh()
+            \ pumvisible() ? "\<C-n>" :
+            \ <SID>check_back_space() ? "\<TAB>" :
+            \ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 function! s:check_back_space() abort
-	let col = col('.') - 1
-	return !col || getline('.')[col - 1]  =~# '\s'
+    let col = col('.') - 1
+    return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
 " Use <c-space> to trigger completion.
@@ -160,11 +160,11 @@ nmap <silent> gr <Plug>(coc-references)
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 
 function! s:show_documentation()
-	if (index(['vim','help'], &filetype) >= 0)
-		execute 'h '.expand('<cword>')
-	else
-		call CocAction('doHover')
-	endif
+    if (index(['vim','help'], &filetype) >= 0)
+        execute 'h '.expand('<cword>')
+    else
+        call CocAction('doHover')
+    endif
 endfunction
 
 " Highlight symbol under cursor on CursorHold
@@ -178,11 +178,11 @@ xmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
 
 augroup mygroup
-	autocmd!
-	" Setup formatexpr specified filetype(s).
-	autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
-	" Update signature help on jump placeholder
-	autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
+    autocmd!
+    " Setup formatexpr specified filetype(s).
+    autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
+    " Update signature help on jump placeholder
+    autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
 augroup end
 
 " Remap for do codeAction of selected region, ex: `<leader>aap` for current paragraph
@@ -236,8 +236,8 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
 
 let g:coc_filetype_map = {
-			\ 'htmldjango': 'html',
-			\ }
+            \ 'htmldjango': 'html',
+            \ }
 
 " indent guiles config
 let g:indent_guides_enable_on_vim_startup = 1
@@ -255,17 +255,17 @@ let maplocalleader = "\\"
 "1번 위키(공개용)와 2번 위키(개인용)
 
 let g:vimwiki_list = [
-			\{
-			\   'nested_syntaxes': {'java':'java', 'python': 'python', 'c++': 'cpp'},
-			\   'path': '/home/ssayebee/wiki/_wiki',
-			\   'ext' : '.md',
-			\},
-			\{
-			\   'path': '/home/ssayebee/todo',
-			\   'ext' : '.md',
-			\   'diary_rel_path': '.',
-			\},
-			\]
+            \{
+            \   'nested_syntaxes': {'java':'java', 'python': 'python', 'c++': 'cpp'},
+            \   'path': '/home/ssayebee/wiki/_wiki',
+            \   'ext' : '.md',
+            \},
+            \{
+            \   'path': '/home/ssayebee/todo',
+            \   'ext' : '.md',
+            \   'diary_rel_path': '.',
+            \},
+            \]
 
 " vimwiki의 conceallevel 을 끄는 쪽이 좋다
 let g:vimwiki_conceallevel = 0
@@ -286,63 +286,63 @@ nnoremap <S-F4> :execute "VWB" <Bar> :lopen<CR>
 " Vimwiki Config END
 
 function! LastModified()
-	if g:md_modify_disabled
-		return
-	endif
-	if &modified
-		" echo('markdown updated time modified')
-		let save_cursor = getpos(".")
-		let n = min([10, line("$")])
+    if g:md_modify_disabled
+        return
+    endif
+    if &modified
+        " echo('markdown updated time modified')
+        let save_cursor = getpos(".")
+        let n = min([10, line("$")])
 
-		exe 'keepjumps 1,' . n . 's#^\(.\{,10}updated\s*: \).*#\1' .
-					\ strftime('%Y-%m-%d %H:%M:%S +0900') . '#e'
-		call histdel('search', -1)
-		call setpos('.', save_cursor)
-	endif
+        exe 'keepjumps 1,' . n . 's#^\(.\{,10}updated\s*: \).*#\1' .
+                    \ strftime('%Y-%m-%d %H:%M:%S +0900') . '#e'
+        call histdel('search', -1)
+        call setpos('.', save_cursor)
+    endif
 endfun
 
 autocmd BufWritePre *.md call LastModified()
 
 function! NewTemplate()
 
-	let l:wiki_directory = v:false
+    let l:wiki_directory = v:false
 
-	for wiki in g:vimwiki_list
-		if expand('%:p:h') == wiki.path
-			let l:wiki_directory = v:true
-			break
-		endif
-	endfor
+    for wiki in g:vimwiki_list
+        if expand('%:p:h') == wiki.path
+            let l:wiki_directory = v:true
+            break
+        endif
+    endfor
 
-	if !l:wiki_directory
-		return
-	endif
+    if !l:wiki_directory
+        return
+    endif
 
-	if line("$") > 1
-		return
-	endif
+    if line("$") > 1
+        return
+    endif
 
-	let l:template = []
-	call add(l:template, '---')
-	call add(l:template, 'layout  : wiki')
-	call add(l:template, 'title   : ')
-	call add(l:template, 'summary : ')
-	call add(l:template, 'date    : ' . strftime('%Y-%m-%d %H:%M:%S +0900'))
-	call add(l:template, 'updated : ' . strftime('%Y-%m-%d %H:%M:%S +0900'))
-	call add(l:template, 'tags    : ')
-	call add(l:template, 'comments: true')
-	call add(l:template, '---')
-	call add(l:template, '')
-	call setline(1, l:template)
-	execute 'normal! gg2jA'
-	echom 'new wiki page has created'
+    let l:template = []
+    call add(l:template, '---')
+    call add(l:template, 'layout  : wiki')
+    call add(l:template, 'title   : ')
+    call add(l:template, 'summary : ')
+    call add(l:template, 'date    : ' . strftime('%Y-%m-%d %H:%M:%S +0900'))
+    call add(l:template, 'updated : ' . strftime('%Y-%m-%d %H:%M:%S +0900'))
+    call add(l:template, 'tags    : ')
+    call add(l:template, 'comments: true')
+    call add(l:template, '---')
+    call add(l:template, '')
+    call setline(1, l:template)
+    execute 'normal! gg2jA'
+    echom 'new wiki page has created'
 endfunction
 
 augroup vimwikiauto
-	autocmd BufWritePre *wiki/*.md keepjumps call LastModified()
-	autocmd BufRead,BufNewFile *wiki/*.md call NewTemplate()
-	autocmd FileType vimwiki inoremap <S-Right> <C-r>=vimwiki#tbl#kbd_tab()<CR>
-	autocmd FileType vimwiki inoremap <S-Left> <Left><C-r>=vimwiki#tbl#kbd_shift_tab()<CR>
+    autocmd BufWritePre *wiki/*.md keepjumps call LastModified()
+    autocmd BufRead,BufNewFile *wiki/*.md call NewTemplate()
+    autocmd FileType vimwiki inoremap <S-Right> <C-r>=vimwiki#tbl#kbd_tab()<CR>
+    autocmd FileType vimwiki inoremap <S-Left> <Left><C-r>=vimwiki#tbl#kbd_shift_tab()<CR>
 augroup END
 
 let g:md_modify_disabled = 0
@@ -353,10 +353,10 @@ let NERDTreeHighlightCursorline = 0
 " windows의 clipboard 사용
 let s:clip = '/mnt/c/Windows/System32/clip.exe' 
 if executable(s:clip)
-	augroup WSLYank
-		autocmd!
-		autocmd TextYankPost * call system('echo '.shellescape(join(v:event.regcontents, "\<CR>")).' | '.s:clip)
-	augroup END
+    augroup WSLYank
+        autocmd!
+        autocmd TextYankPost * call system('echo '.shellescape(join(v:event.regcontents, "\<CR>")).' | '.s:clip)
+    augroup END
 end
 
 nmap <F8> :TagbarToggle<CR>
@@ -409,7 +409,7 @@ let g:rnvimr_enable_bw = 1
 
 " Set up only two columns in miller mode and draw border with both
 let g:rnvimr_ranger_cmd = 'ranger --cmd="set column_ratios 1,1"
-			\ --cmd="set draw_borders both"'
+            \ --cmd="set draw_borders both"'
 
 " Link CursorLine into RnvimrNormal highlight in the Floating window
 highlight link RnvimrNormal CursorLine
@@ -417,33 +417,33 @@ highlight link RnvimrNormal CursorLine
 
 " Map Rnvimr action
 let g:rnvimr_action = {
-			\ '<C-t>': 'NvimEdit tabedit',
-			\ '<C-x>': 'NvimEdit split',
-			\ '<C-v>': 'NvimEdit vsplit',
-			\ 'gw': 'JumpNvimCwd',
-			\ 'yw': 'EmitRangerCwd'
-			\ }
+            \ '<C-t>': 'NvimEdit tabedit',
+            \ '<C-x>': 'NvimEdit split',
+            \ '<C-v>': 'NvimEdit vsplit',
+            \ 'gw': 'JumpNvimCwd',
+            \ 'yw': 'EmitRangerCwd'
+            \ }
 
 " Customize the initial layout
 let g:rnvimr_layout = { 'relative': 'editor',
-			\ 'width': float2nr(round(0.6 * &columns)),
-			\ 'height': float2nr(round(0.6 * &lines)),
-			\ 'col': float2nr(round(0.2 * &columns)),
-			\ 'row': float2nr(round(0.2 * &lines)),
-			\ 'style': 'minimal' }
+            \ 'width': float2nr(round(0.6 * &columns)),
+            \ 'height': float2nr(round(0.6 * &lines)),
+            \ 'col': float2nr(round(0.2 * &columns)),
+            \ 'row': float2nr(round(0.2 * &lines)),
+            \ 'style': 'minimal' }
 
 " Customize multiple preset layouts
 " '{}' represents the initial layout
 let g:rnvimr_presets = [
-			\ {},
-			\ {'width': 0.700, 'height': 0.700},
-			\ {'width': 0.800, 'height': 0.800},
-			\ {'width': 0.950, 'height': 0.950},
-			\ {'width': 0.500, 'height': 0.500, 'col': 0, 'row': 0},
-			\ {'width': 0.500, 'height': 0.500, 'col': 0, 'row': 0.5},
-			\ {'width': 0.500, 'height': 0.500, 'col': 0.5, 'row': 0},
-			\ {'width': 0.500, 'height': 0.500, 'col': 0.5, 'row': 0.5},
-			\ {'width': 0.500, 'height': 1.000, 'col': 0, 'row': 0},
-			\ {'width': 0.500, 'height': 1.000, 'col': 0.5, 'row': 0},
-			\ {'width': 1.000, 'height': 0.500, 'col': 0, 'row': 0},
-			\ {'width': 1.000, 'height': 0.500, 'col': 0, 'row': 0.5}]
+            \ {},
+            \ {'width': 0.700, 'height': 0.700},
+            \ {'width': 0.800, 'height': 0.800},
+            \ {'width': 0.950, 'height': 0.950},
+            \ {'width': 0.500, 'height': 0.500, 'col': 0, 'row': 0},
+            \ {'width': 0.500, 'height': 0.500, 'col': 0, 'row': 0.5},
+            \ {'width': 0.500, 'height': 0.500, 'col': 0.5, 'row': 0},
+            \ {'width': 0.500, 'height': 0.500, 'col': 0.5, 'row': 0.5},
+            \ {'width': 0.500, 'height': 1.000, 'col': 0, 'row': 0},
+            \ {'width': 0.500, 'height': 1.000, 'col': 0.5, 'row': 0},
+            \ {'width': 1.000, 'height': 0.500, 'col': 0, 'row': 0},
+            \ {'width': 1.000, 'height': 0.500, 'col': 0, 'row': 0.5}]
