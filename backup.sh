@@ -8,6 +8,8 @@ cp -r ~/.config/nvim/UltiSnips $(pwd)
 cp ~/.config/nvim/coc-settings.json $(pwd)
 # powerlevel10k config
 cp ~/.p10k.zsh ${pwd}
+# ranger config
+cp ~/.config/ranger/rc.conf $(pwd)
 
 git add .
 git commit -m "$now_time updated"
