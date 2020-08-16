@@ -7,7 +7,7 @@ cp -r ~/.config/nvim/UltiSnips $(pwd)
 # coc-config
 cp ~/.config/nvim/coc-settings.json $(pwd)
 # powerlevel10k config
-cp ~/.p10k.zsh ${pwd}
+cp ~/.p10k.zsh $(pwd)
 # ranger config
 cp ~/.config/ranger/rc.conf $(pwd)
 
