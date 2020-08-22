@@ -114,5 +114,3 @@ export PATH="$HOME/gems/bin:$PATH"
 alias vi='nvim'
 export EDITOR=nvim
 export HIGHLIGHT_STYLE=solarized-light
-
-alias python='python3'
