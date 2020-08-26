@@ -1,11 +1,16 @@
 #!/bin/zsh
 
 cp .zshrc ~
+
 cp init.vim ~/.config/nvim
 cp -r UltiSnips ~/.config/nvim
-# coc-config
 cp coc-settings.json ~/.config/nvim
-# powerlevel10k config
+
+# powerlevel10k conf
 cp .p10k.zsh ~
-# ranger config
+
+# ranger conf
 cp rc.conf ~/.config/ranger
+
+# tmux conf
+cp .tmux.conf ~
