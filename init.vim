@@ -4,12 +4,10 @@ set tabstop=4
 set expandtab
 set shiftwidth=4
 set clipboard=unnamedplus
-set t_Co=256
 set pastetoggle=<F3>
 set hls
 set showmatch
 set cursorline
-" swap 파일 생성 제거
 set noswapfile
 set nobackup
 set nowrap
@@ -70,8 +68,6 @@ highlight Visual gui=reverse
 
 " use true tone color for theme
 if exists('+termguicolors')
-    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
     set termguicolors
 endif
 
