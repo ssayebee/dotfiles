@@ -114,10 +114,7 @@ export PATH="$HOME/gems/bin:$PATH"
 alias vi='nvim'
 export EDITOR=nvim
 export HIGHLIGHT_STYLE=solarized-light
-<<<<<<< HEAD
-=======
 
 # fzf config
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
->>>>>>> fa8c52bad83e5c7a06978335e5b0c2577b3e8a62
