@@ -115,4 +115,6 @@ alias vi='nvim'
 export EDITOR=nvim
 export HIGHLIGHT_STYLE=solarized-light
 
-alias python='python3'
+# fzf config
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
