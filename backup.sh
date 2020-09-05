@@ -7,6 +7,7 @@ cp ~/.zshrc $(pwd)
 cp ~/.config/nvim/coc-settings.json $(pwd)
 cp ~/.config/nvim/init.vim $(pwd)
 cp -r ~/.config/nvim/UltiSnips $(pwd)
+cp -r ~/.config/nvim/vim-include $(pwd)
 
 # powerlevel10k conf
 cp ~/.p10k.zsh $(pwd)

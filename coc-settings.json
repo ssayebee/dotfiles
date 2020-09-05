@@ -2,5 +2,6 @@
   "coc.source.emoji.enable": true,
   "coc.source.emoji.filetypes": null,
   "java.import.gradle.enabled": true,
-  "clangd.path": "/home/ssayebee/.config/coc/extensions/coc-clangd-data/install/10.0.0/clangd_10.0.0/bin/clangd"
+  "clangd.path": "/home/ssayebee/.config/coc/extensions/coc-clangd-data/install/10.0.0/clangd_10.0.0/bin/clangd",
+  "coc.preferences.formatOnSaveFiletypes": ["html", "css", "javascript"]
 }
