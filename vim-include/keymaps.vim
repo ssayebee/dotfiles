@@ -1,13 +1,19 @@
-" Moving tab setting
+" Better window navigation
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
-nmap <F8> :TagbarToggle<CR>
-nmap <leader>ev :e ~/.config/nvim/init.vim<CR>
+" Better tabbing
+vnoremap < <gv
+vnoremap > >gv
 
-tnoremap <C-h> <c-\><c-n><c-w>h
-tnoremap <C-j> <c-\><c-n><c-w>j
-tnoremap <C-k> <c-\><c-n><c-w>k
-tnoremap <C-l> <c-\><c-n><c-w>l
+" Edit init.vim
+nmap <leader>ev :e ~/.config/nvim/init.vim<CR>
+nmap <F8> :TagbarToggle<CR>
+
+" Use alt + hjkl to resize windows
+nnoremap <M-j>    :resize -2<CR>
+nnoremap <M-k>    :resize +2<CR>
+nnoremap <M-h>    :vertical resize -2<CR>
+nnoremap <M-l>    :vertical resize +2<CR>
