@@ -2,6 +2,7 @@ source $HOME/.config/nvim/vim-include/plugins.vim
 source $HOME/.config/nvim/vim-include/setting.vim
 source $HOME/.config/nvim/vim-include/highlights.vim
 source $HOME/.config/nvim/vim-include/keymaps.vim
+source $HOME/.config/nvim/vim-include/windows.vim
 
 source $HOME/.config/nvim/vim-include/coc-config.vim
 source $HOME/.config/nvim/vim-include/ctrlp.vim
