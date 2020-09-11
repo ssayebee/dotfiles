@@ -13,6 +13,7 @@ source $HOME/.config/nvim/vim-include/rnvimrc.vim
 source $HOME/.config/nvim/vim-include/setting.vim
 source $HOME/.config/nvim/vim-include/ultisnips.vim
 source $HOME/.config/nvim/vim-include/vimwiki.vim
+source $HOME/.config/nvim/vim-include/startify.vim
 
 " include auto
 " for include_file in uniq(sort(globpath(&rtp, 'vim-include/*.vim', 0, 1)))
