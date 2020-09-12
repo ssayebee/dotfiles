@@ -76,8 +76,6 @@ augroup vimwikiauto
     autocmd FileType vimwiki inoremap <S-Left> <Left><C-r>=vimwiki#tbl#kbd_shift_tab()<CR>
 augroup END
 
-autocmd FileType vimwiki set shiftwidth=2 tabstop=2
-
 " 자주 사용하는 vimwiki 명령어에 단축키를 취향대로 매핑해둔다
 nmap <LocalLeader>ww <Plug>VimwikiIndex
 nmap <LocalLeader>wi <Plug>VimwikiDiaryIndex

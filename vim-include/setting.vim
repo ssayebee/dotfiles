@@ -41,3 +41,8 @@ colorscheme onehalfdark
 if exists('+termguicolors')
     set termguicolors
 endif
+
+autocmd FileType vimwiki set shiftwidth=2 tabstop=2
+autocmd FileType java set shiftwidth=4 tabstop=4
+
+command! BufOnly execute '%bdelete|edit #|normal `"'
