@@ -1,0 +1,9 @@
+set visualbell                                    " normal mode error bell disable
+set noerrorbells                                  " normal mode error bell disable
+
+set multiple-cursors                              " use multiple-cursors plugin
+set surround                                      " use surround plugin
+
+" custom keymap
+nnoremap <leader>rr :action Run<cr>
+nnoremap <leader>rc :action RunClass<cr>
